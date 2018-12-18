@@ -27,9 +27,18 @@ public class CubeController : MonoBehaviour {
 	}
 
     //キューブが接触したら音を出す
-    void OnCollisionEnter(Collision other)
+    void OnCollisionEnter2D(Collision2D col)
     {
         //unityちゃんと接触したときは音を出さない
-        GetComponent<AudioSource>().volume = (other.gameObject.tag == "Unitychan") ? 1 : 0;
+        if (col.gameObject.tag == "Cube")
+        {
+            GetComponent<AudioSource>().Play();
+        }else if (col.gameObject.tag == "Ground")
+        {
+            GetComponent<AudioSource>().Play();
+        }else if (col.gameObject.tag == "Unitychan")
+        {
+
+        }
     }
 }

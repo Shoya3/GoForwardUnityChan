@@ -6,6 +6,8 @@ TagManager:
   tags:
   - DamageObject
   - Unitychan
+  - Cube
+  - Ground
   layers:
   - Default
   - TransparentFX
